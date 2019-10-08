@@ -1,0 +1,9 @@
+.chonk-img {
+    display: flex;
+    justify-content: center;
+    border: 1px dashed black;
+    width: 150px;
+    height: 150px;
+    padding: 120px;
+}
+

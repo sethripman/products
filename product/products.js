@@ -1,5 +1,5 @@
-import chonks from 'chonks.js';
-import displayChonk from './display-chonk.js';
+import chonks from './chonks.js';
+import displayChonk from '../display-chonk.js';
 
 const list = document.getElementById('chonks');
 

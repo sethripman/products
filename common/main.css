@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+
+body {
+    font-family: 'Vollkorn', serif;
+    background: #eee;
+    margin: 0;
+}
+
 .chonk-img {
     width: 250px;
     height: 250px;
