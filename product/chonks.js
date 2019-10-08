@@ -1,6 +1,6 @@
 const gday = {
     id: 'gday',
-    name: 'G\'day Mate',
+    name: 'Gday Mate',
     image: 'gday.jpg',
     description: 'Wonderfully Hefty',
     category: 'chonk-img',
