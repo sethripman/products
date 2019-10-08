@@ -1,5 +1,6 @@
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
+    newChonk.className = chonk.category;
     newChonk.title = chonk.description;
 
     const h3 = document.createElement('h3');
@@ -15,22 +16,18 @@ function displayChonk(chonk) {
     p.className = 'price';
 
     const usd = '$' + chonk.price.toFixed(2);
-    // const usd = chonk.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
     p.textContent = usd;
-
-    const p2 = document.createElement('p');
-    p2.className = 'size';
-    newChonk.appendChild(p2);
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = chonk.code;
+    button.value = chonk.id;
     p.appendChild(button);
 
     newChonk.appendChild(p);
+
+    const p2 = document.createElement('p');
+    p2.textContent = chonk.size;
+    newChonk.appendChild(p2);
 
     return newChonk;
 }

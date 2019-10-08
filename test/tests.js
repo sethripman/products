@@ -1,1 +1,1 @@
-import './display-chonk.js';
+import './display-chonk.test.js';
