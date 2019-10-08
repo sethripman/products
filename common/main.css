@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Vollkorn&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mansalva&display=swap');
 
 body {
     font-family: 'Vollkorn', serif;
@@ -6,7 +7,16 @@ body {
     margin: 0;
 }
 
-.chonk-img {
+.home-img {
     width: 250px;
     height: 250px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: underline;
+    font-family: 'Mansalva', cursive;
+    font-size: 3em;
 }

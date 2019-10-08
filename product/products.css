@@ -2,8 +2,64 @@
     display: flex;
     justify-content: center;
     border: 1px dashed black;
-    width: 150px;
-    height: 150px;
-    padding: 120px;
+    padding: 105px;
 }
 
+#chonks {
+    padding: 20;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#chonks li {
+    list-style: none;
+    position: relative;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 145px;
+    height: 145px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 2px #ccc;
+    transition: transform 200ms ease-in-out;
+}
+
+#chonks li:hover {
+    box-shadow: 2px 2px 3px #bbb;
+    transform: translate3d(-1px, -1px, 0);
+}
+
+#chonks li h3 {
+    font-size: 1.5rem;
+    margin: 5px;
+    text-decoration: underline;
+}
+
+#chonks li img {
+    width: 150px;
+    height: 150px;
+    margin-block: 5px;
+    padding: 5px;
+}
+
+.price {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price button {
+    transition: color 200ms ease-in-out;
+}
+.price button:hover {
+    background: #aaa;
+    color: white;
+}
