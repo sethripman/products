@@ -1,7 +1,7 @@
 import renderTableRow from './render-table-row.js';
 import cart from '../data/cart.js';
 import chonks from '../data/chonks.js';
-import { calcLineItem, findByID } from '../common/utils.js';
+import { findByID } from '../common/utils.js';
 
 const tableElement = document.querySelector('tbody');
 

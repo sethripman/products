@@ -2,7 +2,7 @@
 // import example from '../src/example.js';
 import displayChonk from '../product/display-chonk.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
-import { findByID, calcLineItem } from '../common/utils.js';
+import { findByID, calcLineItem, calcOrderTotal } from '../common/utils.js';
 // import cart from '../data/cart.js';
 
 const test = QUnit.test;
@@ -103,5 +103,55 @@ test('takes quantity and price and returns the total price', function(assert) {
 
     //Assert
     // Make assertions about what is expected valid result
-    assert.deepEqual(totalPrice, expected);
+    assert.equal(totalPrice, expected);
+});
+
+test('takes cart array and chonks array and returns total price', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const cart = [{
+        id: 'gday',
+        quantity: 2
+    }, {
+        id: 'longman',
+        quantity: 5
+    }, {
+        id: 'boss',
+        quantity: 10
+    }];
+
+    const chonks = [{
+        id: 'gday',
+        name: 'Gday Mate',
+        image: 'gday.jpg',
+        description: 'Wonderfully Hefty',
+        category: 'chonk-img',
+        price: 6.00,
+        size: 'The King from Down Under whose movements roll like thunder'
+    }, {
+        id: 'longman',
+        name: 'Long, Long Man',
+        image: 'longman.jpg',
+        description: 'Inexplicably long',
+        category: 'chonk-img',
+        price: 4.75,
+        size: 'Dimensionally stretched, immense to the max'
+    }, {
+        id: 'boss',
+        name: 'Emperor Bossman',
+        image: 'boss.jpg',
+        description: 'Brobdignagian - corpulent - monstrously huggable',
+        category: 'chonk-img',
+        price: 9.00,
+        size: 'Often late to his meetings since him too busy feeding'
+    }];
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const totalPrice = calcOrderTotal(cart, chonks);
+    const expected = 125.75;
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(totalPrice, expected);
 });
