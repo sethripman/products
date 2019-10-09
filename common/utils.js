@@ -19,6 +19,13 @@ export const calcOrderTotal = (cartArray, chonksArray) => {
         const currentChonkTotalPrice = calcLineItem(cartArray[i].quantity, currentChonk.price);
         orderTotal += currentChonkTotalPrice;
     }
-    
+    /*
+    cart.forEach( lineitem => {
+        for each item in cart, find fruit by id, then run calculations
+    });
+
+    */
+
+
     return Math.round((orderTotal) * 100) / 100;
 };    
