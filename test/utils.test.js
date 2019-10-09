@@ -2,6 +2,7 @@
 // import example from '../src/example.js';
 import displayChonk from '../product/display-chonk.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
+import { findByID } from '../common/utils.js';
 // import cart from '../data/cart.js';
 
 const test = QUnit.test;
@@ -59,4 +60,32 @@ test('renders a table row', function(assert) {
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(stringHtml, expected);
+});
+
+test('takes an array and returns the first item with a matching ID', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const cart = [{
+        id: 'gday',
+        quantity: 2
+    }, {
+        id: 'longman',
+        quantity: 5
+    }, {
+        id: 'boss',
+        quantity: 10
+    }];
+
+    const expected = {
+        id: 'boss',
+        quantity: 10
+    };
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const returnItem = findByID(cart, 'boss');
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(returnItem, expected);
 });
