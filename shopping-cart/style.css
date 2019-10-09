@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+    max-width: 500px;
+}
+
+td, th {
+    text-align: center;
+    border: dotted 1px blue;
+}

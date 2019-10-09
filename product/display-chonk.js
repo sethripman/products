@@ -1,35 +1,35 @@
 function displayChonk(chonk) {
-    const li = document.createElement('li');
-    li.className = chonk.category;
-    li.title = chonk.description;
+    const newChonk = document.createElement('li');
+    newChonk.className = chonk.category;
+    newChonk.title = chonk.description;
 
     const h3 = document.createElement('h3');
     h3.textContent = chonk.name;
-    li.appendChild(h3);
+    newChonk.appendChild(h3);
 
     const img = document.createElement('img');
     img.src = '../assets/' + chonk.image;
     img.alt = chonk.name + ' image';
-    li.appendChild(img);
+    newChonk.appendChild(img);
 
     const p = document.createElement('p');
     p.className = 'price';
 
     const usd = '$' + chonk.price.toFixed(2);
-    // const usd = chonk.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
     p.textContent = usd;
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = chonk.code;
+    button.value = chonk.id;
     p.appendChild(button);
 
-    li.appendChild(p);
+    newChonk.appendChild(p);
 
-    return li;
+    const p2 = document.createElement('p');
+    p2.textContent = chonk.size;
+    newChonk.appendChild(p2);
+
+    return newChonk;
 }
 
 export default displayChonk;
