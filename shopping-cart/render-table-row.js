@@ -1,4 +1,4 @@
-import { makePrettyCurrency } from '../common/utils.js';
+import { makePrettyCurrency, calcLineItem } from '../common/utils.js';
 
 const makeTd = (content) => {
     const tdElement = document.createElement('td');
@@ -9,7 +9,7 @@ const makeTd = (content) => {
 
 export default (chonk, order) => {
     const tableRow = document.createElement('tr');
-    const totalPrice = order.quantity * chonk.price;
+    const totalPrice = calcLineItem(order.quantity, chonk.price);
     const prettyPrice = makePrettyCurrency(chonk.price);
     const prettyTotal = makePrettyCurrency(totalPrice);
 
