@@ -22,11 +22,3 @@ export const calcOrderTotal = (cartArray, chonksArray) => {
     
     return Math.round((orderTotal) * 100) / 100;
 };    
-
-/*
-const totalChonkPrice = (chonks, quantity) => chonks.price * quantity;
-export const cartTotal = (chonks, cart) => {
-
-    
-};
-*/

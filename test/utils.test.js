@@ -3,7 +3,6 @@
 import displayChonk from '../product/display-chonk.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
 import { findByID, calcLineItem, calcOrderTotal } from '../common/utils.js';
-// import cart from '../data/cart.js';
 
 const test = QUnit.test;
 
