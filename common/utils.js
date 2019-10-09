@@ -7,6 +7,9 @@ export const findByID = (array, idString) => {
     return null;
 };
 
+export const calcLineItem = (quantity, price) => {
+    return Math.round((quantity * price) * 100) / 100;
+};
 
 
 /*

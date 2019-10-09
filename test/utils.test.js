@@ -2,7 +2,7 @@
 // import example from '../src/example.js';
 import displayChonk from '../product/display-chonk.js';
 import renderTableRow from '../shopping-cart/render-table-row.js';
-import { findByID } from '../common/utils.js';
+import { findByID, calcLineItem } from '../common/utils.js';
 // import cart from '../data/cart.js';
 
 const test = QUnit.test;
@@ -88,4 +88,20 @@ test('takes an array and returns the first item with a matching ID', function(as
     //Assert
     // Make assertions about what is expected valid result
     assert.deepEqual(returnItem, expected);
+});
+
+test('takes quantity and price and returns the total price', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const quantity = 7;
+    const price = 5.73;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const totalPrice = calcLineItem(quantity, price);
+    const expected = 40.11;
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.deepEqual(totalPrice, expected);
 });
