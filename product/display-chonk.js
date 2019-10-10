@@ -1,3 +1,5 @@
+
+
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
     newChonk.className = chonk.category;
