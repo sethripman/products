@@ -7,3 +7,7 @@ td, th {
     text-align: center;
     border: dotted 1px blue;
 }
+
+.hidden {
+    display: none;
+}

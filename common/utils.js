@@ -70,5 +70,6 @@ export const calcOrderTotal = (cartArray, chonksArray) => {
         orderTotal += currentChonkTotalPrice;
     }
     
-    return Math.round((orderTotal) * 100) / 100;
+    orderTotal = Math.round((orderTotal) * 100) / 100;
+    return makePrettyCurrency(orderTotal);
 };    
