@@ -1,4 +1,4 @@
-
+import { getCart, setCart, incrementInCartById } from '../common/utils.js';
 
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
@@ -23,6 +23,15 @@ function displayChonk(chonk) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = chonk.id;
+    // Adding button for handling clicks - call, retrieve, increment, set functions
+    button.addEventListener('click', () => {
+        // retrieve the cart and set to variable
+        let currentCartInLocalStorage = getCart();
+        incrementInCartById(button.value, currentCartInLocalStorage);
+        setCart(currentCartInLocalStorage);
+        console.log(getCart());
+    });
+
     p.appendChild(button);
 
     newChonk.appendChild(p);

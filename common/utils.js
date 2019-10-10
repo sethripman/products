@@ -5,6 +5,7 @@ export const getCart = () => {
     if (localStorage.getItem(CART_KEY) === null) {
         const serializedEmptyCart = '[]';
         localStorage.setItem(CART_KEY, serializedEmptyCart);
+        console.log('butts');
     }
     // Then, return a parsed copy of the cart in storage
     const cart = JSON.parse(localStorage.getItem(CART_KEY));
@@ -27,17 +28,17 @@ export const incrementInCartById = (id, cart) => {
         };
         
         cart.push(newItem);
-        return;
+        return cart;
     } else {
         //Increment quantity of matching item
-        cart.forEach(order => {
+        cart.forEach(chonk => {
             // if you find a match
-            if (order.id === id) {
+            if (chonk.id === id) {
                 // increment the quantity
-                order.quantity++;
+                chonk.quantity++;
             }
         });
-        return;
+        return cart;
     }
 };
 
