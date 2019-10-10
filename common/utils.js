@@ -5,7 +5,6 @@ export const getCart = () => {
     if (localStorage.getItem(CART_KEY) === null) {
         const serializedEmptyCart = '[]';
         localStorage.setItem(CART_KEY, serializedEmptyCart);
-        console.log('butts');
     }
     // Then, return a parsed copy of the cart in storage
     const cart = JSON.parse(localStorage.getItem(CART_KEY));

@@ -29,7 +29,6 @@ function displayChonk(chonk) {
         let currentCartInLocalStorage = getCart();
         incrementInCartById(button.value, currentCartInLocalStorage);
         setCart(currentCartInLocalStorage);
-        console.log(getCart());
     });
 
     p.appendChild(button);
