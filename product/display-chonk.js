@@ -1,4 +1,4 @@
-import { getCart, setCart, incrementInCartById } from '../common/utils.js';
+import { getCart, setCart, incrementInCartById, findByID } from '../common/utils.js';
 
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
@@ -29,15 +29,23 @@ function displayChonk(chonk) {
         let currentCartInLocalStorage = getCart();
         incrementInCartById(button.value, currentCartInLocalStorage);
         setCart(currentCartInLocalStorage);
+        // change quantity display with click
+        let testChonk = findByID(currentCartInLocalStorage, button.value);
+        quantity.textContent = '#' + testChonk.quantity;
     });
 
     p.appendChild(button);
-
+    
     newChonk.appendChild(p);
 
     const p2 = document.createElement('p');
     p2.textContent = chonk.size;
     newChonk.appendChild(p2);
+
+    // create quantity display
+    const quantity = document.createElement('p');
+    quantity.className = 'center-pad';
+    newChonk.appendChild(quantity);
 
     return newChonk;
 }
