@@ -26,5 +26,5 @@ orderButton.addEventListener('click', () => {
     // clear the cart from local storage
     clearCart();
     // redirect to home page
-    window.location.assign('http://127.0.0.1:5500/index.html');
+    window.location.assign('../');
 });
