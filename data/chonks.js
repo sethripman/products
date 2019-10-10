@@ -55,7 +55,7 @@ const himwhomustnotbenamed = {
     description: 'Lovecraftian in girth',
     category: 'chonk-img',
     price: 999.99,
-    size: 'Forbidden! Lovecraftian hunger made beyond the ken of man. Harbinger of Tsathoggua. Beware!'
+    size: 'Forbidden! Lovecraftian hunger beyond the ken of man. Harbinger of Tsathoggua. Beware!'
 };
 
 const chonks = [

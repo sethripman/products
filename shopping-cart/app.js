@@ -1,6 +1,6 @@
 import renderTableRow from './render-table-row.js';
 import chonks from '../data/chonks.js';
-import { getCart, findByID, calcOrderTotal } from '../common/utils.js';
+import { getCart, clearCart, findByID, calcOrderTotal } from '../common/utils.js';
 
 const tableElement = document.querySelector('tbody');
 let cart = getCart();
@@ -20,3 +20,11 @@ totalCell.textContent = calcOrderTotal(cart, chonks);
 if (totalCell.textContent !== '$0.00') orderButton.classList.remove('hidden');
 
 // add event handler for purchase button
+orderButton.addEventListener('click', () => {
+    // alert cart contents
+    alert(JSON.stringify(cart, true, 2));
+    // clear the cart from local storage
+    clearCart();
+    // redirect to home page
+    window.location.assign('http://127.0.0.1:5500/index.html');
+});
