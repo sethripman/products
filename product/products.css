@@ -17,8 +17,8 @@
     background: white;
     border: 1px solid #aaa;
     border-radius: 5px;
-    width: 145px;
-    height: 145px;
+    width: 180px;
+    height: 180px;
     margin-right: 5px;
     margin-bottom: 5px;
     text-align: center;
@@ -62,4 +62,8 @@
 .price button:hover {
     background: #aaa;
     color: white;
+}
+
+.center-pad {
+    padding: 15px;
 }

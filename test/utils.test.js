@@ -19,7 +19,7 @@ test('renders a chonking boy', function(assert) {
         size: 'Wonderfully Hefty'
     };
 
-    const expected = '<li class="chonk-img" title="The King from Down Under whose movements roll like thunder"><h3>Gday Mate</h3><img src="../assets/gday.png" alt="Gday Mate image"><p class="price">$6.00<button value="gday">Add</button></p><p>Wonderfully Hefty</p></li>';
+    const expected = '<li class="chonk-img" title="The King from Down Under whose movements roll like thunder"><h3>Gday Mate</h3><img src="../assets/gday.png" alt="Gday Mate image"><p class="price">$6.00<button value="gday">Add</button></p><p>Wonderfully Hefty</p><p class="center-pad"></p></li>';
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -148,7 +148,7 @@ test('takes cart array and chonks array and returns total price', function(asser
     //Act 
     // Call the function you're testing and set the result to a const
     const totalPrice = calcOrderTotal(cart, chonks);
-    const expected = 125.75;
+    const expected = '$125.75';
 
     //Assert
     // Make assertions about what is expected valid result
