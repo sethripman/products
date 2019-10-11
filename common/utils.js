@@ -72,4 +72,14 @@ export const calcOrderTotal = (cartArray, chonksArray) => {
     
     orderTotal = Math.round((orderTotal) * 100) / 100;
     return makePrettyCurrency(orderTotal);
-};    
+};
+
+export const currentQuantityDisplay = (buttonvalue) => {
+    let currentCartInLocalStorage = getCart();
+    let newElement = document.createElement('p');
+    // change quantity display with click
+    let testChonk = findByID(currentCartInLocalStorage, buttonvalue);
+    if (testChonk === null) return '#0';
+    newElement.textContent = '#' + testChonk.quantity;
+    return newElement.textContent;
+};
