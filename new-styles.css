@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Rubik+Mono+One&display=swap');
+
+
 * {
     box-sizing: border-box;
 }
@@ -57,6 +60,17 @@ section {
     align-items: center;
     background-color: lightsalmon;
     border: 5px white solid;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.5em;
+}
+
+.classy-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightsalmon;
+    border: 5px white solid;
+    font-family: 'Bungee Inline', cursive;
 }
 
 img {
