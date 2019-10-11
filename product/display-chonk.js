@@ -1,4 +1,4 @@
-import { getCart, setCart, incrementInCartById, findByID, currentQuantityDisplay } from '../common/utils.js';
+import { getCart, setCart, incrementInCartById, currentQuantityDisplay } from '../common/utils.js';
 
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
@@ -38,7 +38,6 @@ function displayChonk(chonk) {
         setCart(currentCartInLocalStorage);
         // change quantity display with click
         quantity.textContent = currentQuantityDisplay(button.value);
-        console.log(quantity.textContent);
     });
 
     p.appendChild(button);
