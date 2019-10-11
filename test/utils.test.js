@@ -19,7 +19,7 @@ test('renders a chonking boy', function(assert) {
         size: 'Wonderfully Hefty'
     };
 
-    const expected = '<li class="chonk-img" title="The King from Down Under whose movements roll like thunder"><h3>Gday Mate</h3><img src="../assets/gday.png" alt="Gday Mate image"><p class="price">$6.00<button value="gday">Add</button></p><p>Wonderfully Hefty</p><p class="center-pad"></p></li>';
+    const expected = '<li class="chonk-img" title="The King from Down Under whose movements roll like thunder"><h3>Gday Mate</h3><img src="../assets/gday.png" alt="Gday Mate image"><p class="price">$6.00<p class="center-pad">#0</p><button value="gday">Add</button></p><p>Wonderfully Hefty</p></li>';
 
     //Act 
     // Call the function you're testing and set the result to a const

@@ -1,4 +1,4 @@
-import { getCart, setCart, incrementInCartById, findByID } from '../common/utils.js';
+import { getCart, setCart, incrementInCartById, currentQuantityDisplay } from '../common/utils.js';
 
 function displayChonk(chonk) {
     const newChonk = document.createElement('li');
@@ -23,6 +23,13 @@ function displayChonk(chonk) {
     const button = document.createElement('button');
     button.textContent = 'Add';
     button.value = chonk.id;
+
+    // create quantity display
+    // display function returns text content, set the quantity to what display returns
+    const quantity = document.createElement('p');
+    quantity.className = 'center-pad';
+    p.appendChild(quantity);
+    quantity.textContent = currentQuantityDisplay(button.value);
     // Adding button for handling clicks - call, retrieve, increment, set functions
     button.addEventListener('click', () => {
         // retrieve the cart and set to variable
@@ -30,8 +37,7 @@ function displayChonk(chonk) {
         incrementInCartById(button.value, currentCartInLocalStorage);
         setCart(currentCartInLocalStorage);
         // change quantity display with click
-        let testChonk = findByID(currentCartInLocalStorage, button.value);
-        quantity.textContent = '#' + testChonk.quantity;
+        quantity.textContent = currentQuantityDisplay(button.value);
     });
 
     p.appendChild(button);
@@ -42,10 +48,7 @@ function displayChonk(chonk) {
     p2.textContent = chonk.size;
     newChonk.appendChild(p2);
 
-    // create quantity display
-    const quantity = document.createElement('p');
-    quantity.className = 'center-pad';
-    newChonk.appendChild(quantity);
+
 
     return newChonk;
 }

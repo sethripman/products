@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline|Rubik+Mono+One&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: lightblue;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul {
+    margin-right: 110px;
+    width: 40%;
+}
+
+li {
+   background-color: white;
+   justify-content: center;
+   align-content: center;
+   padding: 2px;
+   border: 1px black solid;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.photobox {
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-auto-rows: 250px;
+    grid-auto-columns: 200px;
+    width: 85%;
+    background: darkgray;
+    border: 1px solid;
+    margin: auto;
+}
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcyan;
+    border: 5px white solid;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightsalmon;
+    border: 5px white solid;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 1.5em;
+}
+
+.classy-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightsalmon;
+    border: 5px white solid;
+    font-family: 'Bungee Inline', cursive;
+}
+
+img {
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
